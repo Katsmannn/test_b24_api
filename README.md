@@ -10,9 +10,9 @@
 Модуль принимает информацию о сделке в формате JSON и заносит эту информацию в систему Bitrix24. Исходные данные для работы модуля:  
 > Входные данные в формате JSON в соответствии с ТЗ. Поле 'delivery_date' - строка в формате: yyyy-mm-dd:hh:mm.  
 > Соответсвие полей для сделки (crm.deal.fields):  
- Запрос          | Bitrix24                  
------------------|-------------------------  
- title           | TITLE                     
+ Запрос | Bitrix24 
+--------|---------
+ title | TITLE  
  description     | COMMENTS                  
  client          | CONTACT_ID                
  products        | crm.deal.productrows      
