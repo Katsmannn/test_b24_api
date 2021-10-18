@@ -7,18 +7,18 @@
 > Получение списка валют из системы Bitrix24.  
 > Проверка наличия валюты в Bitrix24. Если валюта есть в системе - данные о валюте обновляются метедом update, если валюта отсутствует в системе - данные о валюте добавляются методом add.  
 ### create_deal.py
-Модуль принимает информацию о сделке в формате JSON и заносит эту информацию в систему Bitrix24. Исходные данные для работы модуля:
+Модуль принимает информацию о сделке в формате JSON и заносит эту информацию в систему Bitrix24. Исходные данные для работы модуля:  
 > Входные данные в формате JSON в соответствии с ТЗ. Поле 'delivery_date' - строка в формате: yyyy-mm-dd:hh:mm.  
 > Соответсвие полей для сделки (crm.deal.fields):
-| Запрос | Bitrix24 |
-|--------|----------|
-| title | TITLE |
-| description | COMMENTS |
-| client | CONTACT_ID |
-| products | crm.deal.productrows |
-| delivery_adress | UF_CRM_DELIVERY_ADDRESS |
-| delivery_date | CLOSEDATE |
-| delivery_code | UF_CRM_DELIVERY_CODE |
+| Запрос          | Bitrix24                |  
+|-----------------|-------------------------|  
+| title           | TITLE                   |  
+| description     | COMMENTS                |  
+| client          | CONTACT_ID              |  
+| products        | crm.deal.productrows    |  
+| delivery_adress | UF_CRM_DELIVERY_ADDRESS |  
+| delivery_date   | CLOSEDATE               |  
+| delivery_code   | UF_CRM_DELIVERY_CODE    |  
 > Пользовательские поля UF_CRM_DELIVERY_ADDRESS и UF_CRM_DELIVERY_CODE уже созданы в системе.  
 > Если сделка уже есть в системе и список товаров отличается от списка товаров в запросе, то товары для сделки из обоих списков объединяются.  
 * Алгоритм работы модуля:
